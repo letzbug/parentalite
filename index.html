@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La parentalité</title>
 
+<style>
+:root {
+  --bg-overlay: rgba(7, 27, 58, 0.55);
+  --text-main: #ffffff;
+  --text-soft: #c7d9f2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background: transparent;
+}
+
+/* Fullscreen Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("parentalite.png") center / cover no-repeat;
+}
+
+/* Hero */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 4vh, 4.5rem) 1.5rem;
+}
+
+/* Content */
+.hero-content {
+  max-width: 1100px;
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 5.5vw, 4.3rem);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: clamp(1.4rem, 2.3vw, 1.85rem);
+  line-height: 1.85;
+  color: var(--text-soft);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+
+    <h1>
+      La parentalité, le défi quotidien
+    </h1>
+
+    <p>
+Être parent au 21e siècle peut être complexe et source d’incertitudes. Cette formation 
+propose des outils simples issus de la Discipline Positive pour mieux comprendre ses enfants, 
+poser des limites claires avec bienveillance et gérer les conflits sereinement. Elle vise à instaurer 
+plus de coopération, d’autonomie et d’harmonie au sein de la famille, notamment dans les familles recomposées.
+
+Elternsein ist im 21. Jahrhundert oft herausfordernd und mit Unsicherheiten verbunden. Diese praxisnahe 
+Weiterbildung zeigt einfache und wirksame Methoden aus der Positiven Disziplin, um Konflikte zu reduzieren, klare 
+Grenzen zu setzen und gleichzeitig respektvoll und gelassen zu bleiben. Ziel ist es, mehr Harmonie, Selbstständigkeit 
+und Zusammenarbeit im Familienalltag zu fördern – besonders auch in Patchwork-Familien.
+    </p>
+
+  </div>
+</section>
+
+</body>
+</html>
